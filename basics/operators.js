@@ -7,4 +7,6 @@ console.log(results)
 var obtainedMarks = 80
 var totalMarks = 100
 var percentage = obtainedMarks / totalMarks * 100
-console.log(percentage)
+let roundPewrcentage = Math.round(percentage)
+
+console.log(percentage + "%")
