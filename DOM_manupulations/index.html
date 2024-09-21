@@ -14,24 +14,54 @@
     <h1 class="my-title">My Title</h1>
     <h2 class="counting">1500</h2>
 
+    <div class="container" style="display: flex; justify-content: space-between;">
+    <div class="square"></div>
+    <style>
+        .square {
+            height: 90px;
+            width: 90px;
+            background-color: red;
+        }
+    </style>
+    <div class="square1"></div>
+    <style>
+        .square1 {
+            height: 90px;
+            width: 90px;
+            background-color: blue;
+        }
+    </style>
+
+    </div>
+
+
     <script>
+        const square = document.querySelector(".square");
+        const square1 = document.querySelector(".square1");
+        square.addEventListener("click", () => 
+        square.style.backgroundColor = getComputedStyle(square1).backgroundColor);
+        square1.addEventListener("click", () => 
+        square1.style.backgroundColor = getComputedStyle(square).backgroundColor);
+
+
+
         var number = document.querySelector(".counting")
         var title = document.querySelector(".my-title")
         // console.log(number)
 
-        var count = 1;
-        // the set interval function will run every 64ms
-        setInterval(()=> {
-            if(count <= 1500){
-                count++;
-                number.innerText = count
-            }
-        }, 64)
+        // var count = 1;
+        // // the set interval function will run every 64ms
+        // setInterval(()=> {
+        //     if(count <= 1500){
+        //         count++;
+        //         number.innerText = count
+        //     }
+        // }, 64)
 
         // setTimeout function will run after 1000ms
-        setTimeout(()=> {
-            title.innerHTML = "My Another Title"
-        }, 2000)
+        // setTimeout(()=> {
+        //     title.innerHTML = "My Another Title"
+        // }, 2000)
     </script>
 </body>
 </html>
